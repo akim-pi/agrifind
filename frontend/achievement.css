@@ -98,3 +98,13 @@ body   {
   position:relative;
   right:10px;
 }
+.modal-foooter
+{
+  position:relative;
+  bottom:80px;
+}
+.close {
+  position:relative;
+  bottom:80px;
+  right:170px;
+}

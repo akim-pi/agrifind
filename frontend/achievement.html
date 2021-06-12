@@ -94,10 +94,64 @@
 
              <div class="total">Total : 3</div> 
                  
-              <button type="button" class="btn btn-success"  id="add"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" 
-                fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
-              </svg></button>
+             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" 
+              fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+              <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+            </svg></button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Add Achievement</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <!--Add Achievement-->
+                  <div class="modal-body">
+                   <form>
+                      <div class="form-group">
+                        <label for="name" class="col-form-label"> Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ex : Gemastik Data Mining">
+
+                        <label for="field" class="col-form-label">Field</label>
+                        <input type="text" class="form-control" id="field" placeholder = "Ex : Data Mining" >
+
+                        <label for="rank" class="col-form-label">Rank</label>
+                        <select class="form-control" id="rank" >
+                          <option value="">Rank</option>
+                          <option>First (1st)</option>
+                          <option>Second (2nd)</option>
+                          <option>Third (3rd)</option>
+                          <option>Favorite</option>
+                          <option>Honorable Mention</option>
+                          <option>Participate</option>
+                          <option>Other</option>
+                        </select>
+                        <label for="organiser" class="col-form-label">Organiser</label>
+                        <input type="text" class="form-control"id="organiser"  placeholder="Ex : Telkom" >
+
+                        <label for="desc" class="col-form-label">Description</label>
+                        <textarea class="form-control" id="desc" placeholder="Ex : Dibimbing Pak Julio" rows="2"></textarea>
+
+                       
+                      </div>
+                      <br>
+                      <br>
+                      <br>
+                    </form>
+                  </div>
+                 <div class="modal-foooter">
+                  <button type="button" class="btn btn-success" > Add Achievement </button>
+                   </div>
+                   <div class="close">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              
+                </div>
+              </div>
+            </div>
+             
               <div class="container">
               <table class="table table-condensed"  id="myTable">
       <thead class="thead-dark">

@@ -182,8 +182,8 @@ border-color:black;
   box-sizing:border-box;
   background:#D3FFEA;
   position:absolute;
-  left:0px;
-  top:200px;
+ right:-20px;
+  top:180px;
   display: flex;
   margin-top:30px;
   width: 883px;
@@ -227,5 +227,14 @@ footer
   position:relative;
   right:10px;
 }
+.linkk {
+  font-size:15px;
+}
 
+.linkk a {
+  position:absolute;
+  left: 50px;
+  text-decoration:none;
+  color:#0275d8;
+}
 

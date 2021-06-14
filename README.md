@@ -93,6 +93,8 @@ Lebih lengkapnya bisa dibaca di site kami :)
 -   Laravel
 -   Apache
 
+## HASIL DAN PEMBAHASAN
+
 ## USE CASE DIAGRAM
 ![agrfind-Page-13](https://user-images.githubusercontent.com/63986370/121780896-98aa5a00-cbcc-11eb-8ae2-ad951ed9e4c7.png)
 
@@ -163,11 +165,11 @@ Lebih lengkapnya bisa dibaca di site kami :)
       </tr>
 </table>
 
-## DESKRIPSI APLIKASI
+
 
 ## USER ANALYSIS
 
-## HASIL DAN PEMBAHASAN
+
 
 ## HASIL IMPLEMENTASI
 

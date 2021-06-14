@@ -175,5 +175,14 @@ Lebih lengkapnya bisa dibaca di site kami :)
 ### POSITIVE CASE
 ### NEGATIVE CASE
 
-## SARAN
+# OUR JOURNAL
+## TRELLO
+![AgriFind _ Trello - Google Chrome 09_06_2021 01_41_46 (2)](https://user-images.githubusercontent.com/63392797/121232399-254ed280-c8c4-11eb-9b1c-e17e3438b272.png)
+## G-SITES
+![Screenshot (218)](https://user-images.githubusercontent.com/79956203/121248117-3d771f80-c8cd-11eb-9c09-cda0b3b3fddb.png)
+
+# SARAN
+
+# PENUTUP
+Puji Syukur kepada Allah SWT atas segala rahmat yang diberikan sehingga kelompok kami dapat menyelesaikan tugas project praktium dari Mata Kuliah Rekayasa Perangkat Lunak Departemen Ilmu Komputer IPB University. Dalam project ini, kami belajar banyak hal-hal baru dalam bidang software engineering, mulai dari task management, user analisis, stakeholder, time managament dan sebagainya. Kelompok kami ingin mengucapkan terimakasih kepada Para dosen mata kuliah RPL beserta asisten praktikum atas ilmu yang sudah diberikan sehingga kami dapat menyelesaikan project aplikasi web ini dengan sebaik mungkin.
 

@@ -8,6 +8,8 @@ use App\Models\Contact_Model;
 use App\Models\Department_Model;
 use App\Models\Skill_Model;
 use App\Models\Achievement_Model;
+use App\Models\Follow_Model;
+use App\Models\Message_Model;
 
 class Setting extends BaseController
 {
@@ -17,6 +19,8 @@ class Setting extends BaseController
   protected $deptModel;
   protected $skillModel;
   protected $achievementModel;
+  protected $followModel;
+  protected $messageModel;
   protected $session;
 
   public function __construct()
@@ -27,6 +31,8 @@ class Setting extends BaseController
     $this->deptModel = new Department_Model();
     $this->skillModel = new Skill_Model();
     $this->achievementModel = new Achievement_Model();
+    $this->followModel = new Follow_Model();
+    $this->messageModel = new Message_Model();
     $this->session = \Config\Services::session();
   }
 
@@ -544,7 +550,12 @@ class Setting extends BaseController
     //check if old password is the same as current
     if (password_verify($passdel, $password)) { //success
 
-      dd('delete account');
+      $this->userModel->where('id', $session_id)->delete();
+      $this->dataModel->where('id', $session_id)->delete();
+      $this->contactModel->where('id', $session_id)->delete();
+      $this->messageModel->where('sender_id', $session_id)->set(['delete_sender' => 1])->update();
+      $this->messageModel->where('receiver_id', $session_id)->set(['delete_receiver' => 1])->update();
+      $this->followModel->where('follower_id', $session_id)->orWhere('following_id', $session_id)->delete();
 
       return redirect()->to('/auth/logout');
     } else { //fail, worng password

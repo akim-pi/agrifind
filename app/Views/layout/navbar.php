@@ -3,7 +3,7 @@
 
     <!-- <div class="container-md"> -->
     <a class="navbar-brand" href="/">
-      <img class="mx-2" src="/img/favicon.png" height="30px" alt="">
+      <img class="mx-2" src="/css/bg/favicon.png" height="30px" alt="">
         AgriFind
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,7 @@
               <!-- <li><a class="dropdown-item" href="/message">Message</a></li> -->
               <!-- <li><a class="dropdown-item" href="/follow">Follow</a></li> -->
               <li><a class="dropdown-item" href="/setting">Setting</a></li>
+              <li><a class="dropdown-item" href="/follow">Follow</a></li>
 
               <li>
                 <hr class="dropdown-divider">

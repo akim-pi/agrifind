@@ -3,137 +3,180 @@
 
 <div class="container">
   <!-- header -->
-  <img class="" width="200px" src="/img/header/<?= $user['header']; ?>" alt="" style="object-fit:cover; width: 100%; height: 200px;">
+
+  <!-- <img class="" width="200px" src="/img/header/<?= $user['header']; ?>" alt="" style="object-fit:cover; width: 100%; height: 200px;"> -->
 
   <div class="row mt-5 mb-3">
     <div class="col-9">
-      <div class="row">
-        <div class="col">
-          <h1 class="">My Profile</h1>
-        </div>
-        <div class="col">
-          <div class="float-end">
-            <?php if ($user['cv']) : ?>
-              <a class="btn btn-primary" href="/docs/cv/<?= $user['cv'] ?>" target="_blank">CV</a>
-            <?php endif; ?>
-          </div>
 
-        </div>
-      </div>
-
-      <!-- availability -->
-      <?php if ($user['availability'] == 'Available') : ?>
-        <p class="badge bg-success" nowrap><?= $user['availability']; ?></p>
-      <?php elseif (($user['availability'] == 'Unavailable')) : ?>
-        <p class="badge bg-danger"><?= $user['availability']; ?></p>
-      <?php elseif (($user['availability'] == 'Do Not Disturb')) : ?>
-        <p class="badge bg-warning"><?= $user['availability']; ?></p>
-      <?php endif; ?>
-      <br>
-
-      <!-- avatar -->
-      <img class="mb-3 rounded-circle" width="200px" src="/img/avatar/<?= $user['avatar']; ?>" alt="" style="  width: 100px;
+      <!-- header card -->
+      <div class="card mb-3">
+        <img src="/img/header/<?= $user['header']; ?>" alt="" style="object-fit:cover; width: 100%; height: 200px;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <!-- avatar -->
+              <img class="mb-3 rounded-circle mx-4" width="200px" src="/img/avatar/<?= $user['avatar']; ?>" alt="" style="  width: 100px;
         height: 100px;
         background-position: center center;
         background-repeat: no-repeat;
-        object-fit:cover;">
-      <br>
+        object-fit:cover;
+        margin-top: -70px">
+              <br>
+            </div>
+            <div class="col">
+              <div class="float-end">
+                <?php if ($user['cv']) : ?>
+                  <a class="btn btn-primary" href="/docs/cv/<?= $user['cv'] ?>" target="_blank">CV</a>
+                <?php endif; ?>
+              </div>
+            </div>
+          </div>
 
-      <!-- Button trigger modal contact info-->
-      <a type="button" class="" data-bs-toggle="modal" data-bs-target="#contactinfo">
-        Contact info
-      </a>
+          <div class="mx-3">
+            <h2><?= $user['name']; ?></h2>
 
-        <br>
-      <a href="/follow/following">Following <?= count($following_count); ?></a> <a href="/follow"><span class="mx-2">Follower <?= count($follower_count); ?></span></a>
-
-      <!-- Info -->
-      <h2>Information</h2>
-      <ul>
-        <?php foreach ($user as $key => $d) : ?>
-          <li><?= $key; ?>: <?= $d; ?></li>
-        <?php endforeach; ?>
-      </ul>
-
-      <h2>Skill</h2>
-      <table class="table table-hover align-middle table-fit">
-        <thead>
-          <col style="width: 10%;">
-          <col style="width: 20%;">
-          <col style="width: 50%;">
-          <tr class="table-dark">
-            <th scope="col">#</th>
-            <th scope="col">Skill</th>
-            <th scope="col">Level</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <?php $i = 1 ?>
-          <?php foreach ($skill as $s) : ?>
-
-            <tr>
-              <th scope="row"><?= $i++; ?></th>
-              <th scope="row"><?= $s['name']; ?></th>
-              <th scope="row">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: <?= $s['level'] * 10; ?>%;" aria-valuenow="<?= $s['level']; ?>" aria-valuemin="0" aria-valuemax="20"><?= $s['level']; ?></div>
-                </div>
-              </th>
-            </tr>
-
-          <?php endforeach; ?>
-
-        </tbody>
-      </table>
-
-      <h2>Achievement</h2>
-      <table class="table table-hover align-middle table-fit">
-        <thead>
-          <col style="width: 5%;">
-          <col style="width: 15%;">
-          <col style="width: 15%;">
-          <col style="width: 15%;">
-          <col style="width: 15%;">
-          <col style="width: 15%;">
-          <col style="width: 20%;">
-          <tr class="table-dark">
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Field</th>
-            <th scope="col">Rank</th>
-            <th scope="col">Organiser</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <?php $i = 1 ?>
-          <?php foreach ($achieve as $s) : ?>
-
-            <tr>
-              <th scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $i++; ?></th>
-              <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><b><?= $s['name']; ?></b></td>
-              <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $s['field']; ?></td>
-              <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $s['rank']; ?></td>
-              <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $s['organiser']; ?></td>
-            </tr>
-
-            <?php if ($s['description'] != '') : ?>
-
-              <tr class="collapse" id="desc<?= $s['id']; ?>">
-                <td></td>
-                <td colspan="4" scope="row"><?= $s['description']; ?></td>
-              </tr>
-
+            <!-- availability -->
+            <?php if ($user['availability'] == 'Available') : ?>
+              <p class="badge bg-success" nowrap><?= $user['availability']; ?></p>
+            <?php elseif (($user['availability'] == 'Unavailable')) : ?>
+              <p class="badge bg-danger"><?= $user['availability']; ?></p>
+            <?php elseif (($user['availability'] == 'Do Not Disturb')) : ?>
+              <p class="badge bg-warning"><?= $user['availability']; ?></p>
             <?php endif; ?>
 
-          <?php endforeach; ?>
+            <!-- Button trigger modal contact info-->
+            <a type="button" class="mx-2" data-bs-toggle="modal" data-bs-target="#contactinfo">
+              Contact info
+            </a>
 
-        </tbody>
-      </table>
+            <br>
+            <a href="/follow/following">Following <?= count($following_count); ?></a> <a href="/follow"><span class="mx-2">Follower <?= count($follower_count); ?></span></a>
 
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+      <div class="card-header">
+          <h3 class="card-title mx-3 mt-2">Information</h3>
+        </div>
+        <div class="card-body mx-3">
+          <div class="row">
+            <div class="col">
+              <b>Name</b> : <?= $user['name']; ?><br>
+              <b>Email</b> : <?= $user['username']; ?>@apps.ipb.ac.id<br>
+              <b>NIM</b> : <?= $user['nim']; ?><br>
+              <b>Batch</b> : <?= $user['batch']; ?><br>
+            </div>
+            <div class="col">
+              <b>Department</b> : <?= $user['department']; ?><br>
+              <b>Faculty</b> : <?= $user['faculty']; ?><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <h3 class="card-title mx-3 mt-2">Skill</h3>
+        </div>
+        <div class="card-body mx-3">
+
+
+          <div class="row">
+            <table class="table align-middle table-fit">
+              <thead>
+                <!-- <col style="width: 10%;"> -->
+                <col style="width: 20%;">
+                <col style="width: 50%;">
+                <tr class="table-dark">
+                  <!-- <th scope="col">#</th>
+                  <th scope="col">Skill</th>
+                  <th scope="col">Level</th> -->
+                </tr>
+              </thead>
+
+              <tbody>
+                <?php $i = 1 ?>
+                <?php foreach ($skill as $s) : ?>
+
+                  <tr>
+                    <!-- <th scope="row"><?= $i++; ?></th> -->
+                    <th scope="row"><?= $s['name']; ?></th>
+                    <th scope="row">
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <?= $s['level'] * 10; ?>%;" aria-valuenow="<?= $s['level']; ?>" aria-valuemin="0" aria-valuemax="20"><?= $s['level']; ?></div>
+                      </div>
+                    </th>
+                  </tr>
+
+                <?php endforeach; ?>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <h3 class="card-title  mx-3 mt-2">Achievement</h3>
+        </div>
+        <div class="card-body mx-3">
+
+          <div class="row">
+            <table class="table table-hover align-middle table-fit">
+              <thead>
+                <col style="width: 5%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+                <col style="width: 20%;">
+                <tr class="table-dark">
+                  <!-- <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Field</th>
+                  <th scope="col">Rank</th>
+                  <th scope="col">Organiser</th> -->
+                </tr>
+              </thead>
+
+              <tbody>
+                <?php $i = 1 ?>
+                <?php foreach ($achieve as $s) : ?>
+
+                  <tr>
+                    <th scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $i++; ?></th>
+                    <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><b><?= $s['name']; ?></b></td>
+                    <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $s['field']; ?></td>
+                    <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $s['rank']; ?></td>
+                    <td scope="row" data-bs-toggle="collapse" data-bs-target="#desc<?= $s['id']; ?>"><?= $s['organiser']; ?></td>
+                  </tr>
+
+                  <?php if ($s['description'] != '') : ?>
+
+                    <tr class="collapse" id="desc<?= $s['id']; ?>">
+                      <td></td>
+                      <td colspan="4" scope="row"><?= $s['description']; ?></td>
+                    </tr>
+
+                  <?php endif; ?>
+
+                <?php endforeach; ?>
+
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- achievement board -->
     <div class="col-3">
       <div class="card">
         <div class="card-body">

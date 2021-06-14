@@ -4,9 +4,6 @@
     <div class="card-title ">
       <h1>Setting</h1>
     </div>
-    <p class="card-text">
-      Halo
-    </p>
   </div>
 
   <ul class="list-group list-group-flush">

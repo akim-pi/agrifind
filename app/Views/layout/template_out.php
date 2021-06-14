@@ -13,7 +13,7 @@
   <title><?= $title; ?></title>
 </head>
 
-<body>
+<body style="background-image: url('/css/bg/loginbg.jpg'); background-size: cover">
 
   <?= $this->include('layout/navbar_out'); ?>
   <?= $this->renderSection('content') ?>

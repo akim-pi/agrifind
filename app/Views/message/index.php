@@ -31,45 +31,46 @@
       </div>
       <div class="row">
 
+        <div class="card">
+          <table class="table table-hover table-sm align-middle  mt-3 mb-3">
+            <thead>
+              <col style="width: 5%;">
+              <col style="width: 50%;">
+              <col style="width: 30%;">
+              <col style="width: 15%;">
 
-        <table class="table table-hover table-sm align-middle">
-          <thead>
-            <col style="width: 5%;">
-            <col style="width: 50%;">
-            <col style="width: 30%;">
-            <col style="width: 15%;">
-
-            <tr class="table-dark">
-              <th scope="col">#</th>
-              <th scope="col">Subject</th>
-              <th scope="col">From</th>
-              <th scope="col">Time</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <!-- table content -->
-            <?php $i = 1 ?>
-            <?php foreach ($message as $m) : ?>
-              <tr data-bs-toggle="collapse" data-bs-target="#message<?= $m['id']; ?>">
-                <th scope="row"><?= $i++; ?></th>
-                <td class="table-secondary"><?= $m['subject']; ?></td>
-                <td><?= $m['sender_name']; ?></td>
-                <td><?= gmdate("d M - H:i", $m['created_at']); ?></td>
+              <tr class="table-dark">
+                <th scope="col">#</th>
+                <th scope="col">Subject</th>
+                <th scope="col">From</th>
+                <th scope="col">Time</th>
               </tr>
+            </thead>
+            <tbody>
 
-              <?php if ($m['message'] != '') : ?>
-                <tr class="collapse table-secondary" id="message<?= $m['id']; ?>">
-                  <td></td>
-                  <td colspan="2" scope="row"><?= $m['message']; ?></td>
-                  <td><a href="/message/deleteReceiver/<?= $m['id']; ?>" class="btn btn-danger btn-sm float-end"><i class="bi bi-trash-fill"></i></a></td>
+              <!-- table content -->
+              <?php $i = 1 ?>
+              <?php foreach ($message as $m) : ?>
+                <tr data-bs-toggle="collapse" data-bs-target="#message<?= $m['id']; ?>">
+                  <th scope="row"><?= $i++; ?></th>
+                  <td class="table-secondary"><?= $m['subject']; ?></td>
+                  <td><?= $m['sender_name']; ?></td>
+                  <td><?= gmdate("d M - H:i", $m['created_at']); ?></td>
                 </tr>
-              <?php endif; ?>
-            <?php endforeach; ?>
-            </tr>
-          </tbody>
-        </table>
 
+                <?php if ($m['message'] != '') : ?>
+                  <tr class="collapse table-secondary" id="message<?= $m['id']; ?>">
+                    <td></td>
+                    <td colspan="2" scope="row"><?= $m['message']; ?></td>
+                    <td><a href="/message/deleteReceiver/<?= $m['id']; ?>" class="btn btn-danger btn-sm float-end"><i class="bi bi-trash-fill"></i></a></td>
+                  </tr>
+                <?php endif; ?>
+              <?php endforeach; ?>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
       </div>
     </div>
   </div>

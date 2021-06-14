@@ -31,39 +31,28 @@ body   {
   border-radius:25px;
   border-color:black;
 }
-
-.box {
-  box-sizing:border-box;
+.card {
+  
   position:absolute;
-  position:-webkit-sticky;
- right:60px;
+  right:60px;
  top:120px;
   font-family:"Raleway";
- border-radius:16px;
+ border-radius:16px 16px 16px 16px;
  margin-right:30px;
+ 
   
 }
-.flex{
-border-radius:30px;
-background:#2a9d8f;
-width:200px;
-text-align:center;
-border-color:black;
+.card-body {
+  border-radius:16px 16px 0px 0px;
+  text-align:center;
+  background:#2a9d8f;
 }
-.rank 
-{
-  font-family:"Raleway";
- box-sizing:border-box;
- background:white;
- padding-top:5px;
- font-size:15px;
- text-align: left;
- border-width:groove;
- border-color:black;
- border-radius:0px 0px 16px 16px;
- 
+.rounded-bottom-16 {
+  border-bottom-left-radius: 16px!important;
+  border-bottom-right-radius: 16px!important;
+}
 
-}
+
 .profile {
   position:absolute;
   top:120px;

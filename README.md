@@ -167,8 +167,6 @@ Lebih lengkapnya bisa dibaca di site kami :)
 
 
 
-## USER ANALYSIS
-
 
 
 ## HASIL IMPLEMENTASI

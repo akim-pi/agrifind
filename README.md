@@ -154,7 +154,6 @@ Lebih lengkapnya bisa dibaca di site kami :)
       <ol>
       <li>Setting</li>
       <li>User Information</li>
-      <li>Send Message</li>
       </ol>
       </td>
       </tr>

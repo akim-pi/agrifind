@@ -236,6 +236,36 @@ Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak 
  </table>
        
 ### NEGATIVE CASE
+Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak dengan memberikan kumpulan data yang tidak valid.
+<table>
+   <tr>
+    <th>No</th>
+    <th>Skenario</th>
+    <th>Pre-requisites</th>
+     <th>Langkah </th>
+     <th> Expected Result </th>
+     <th> Actual Result </th>
+     <th> Status </th>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>User mendaftarkan nama, email, dan password yang tidak valid</td>
+    <td>User mengakses web Agrifind</td>
+    <td>User mengakses halaman sign up, lalu memasukkan nama, email yang tidak sesuai, dan password yang salah kemudian mencentang persyaratan lalu klik sign up</td>
+     <td>Daftar akun gagal</td>
+     <td>Daftar akun gagal</td>
+     <td>Pass</td>
+  </tr>
+   <tr>
+    <td>2</td>
+    <td>User login dengan akun yang tidak valid</td>
+    <td>User mengakses web Agrifind</td>
+    <td>User mengakses halaman login, lalu memasukkan email dan password dengan format yang salah kemudian klik log in</td>
+     <td>Log in gagal dan user dipersilahkan isi form kembali</td>
+     <td>Log in gagal dan user dipersilahkan isi form kembali</td>
+     <td>Pass</td>
+  </tr>
+  </table>
 
 # OUR JOURNAL
 ## TRELLO

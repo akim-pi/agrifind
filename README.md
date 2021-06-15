@@ -180,7 +180,7 @@ Kami melakukan testing secara manual tanpa menggunakan bantuan tools atau script
 Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak dengan memberikan kumpulan data yang valid.
 <table>
    <tr>
-    <th>No/th>
+    <th>No</th>
     <th>Skenario</th>
     <th>Pre-requisites</th>
      <th>Langkah </th>
@@ -198,7 +198,7 @@ Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak 
      <td>Pass</td>
   </tr>
    <tr>
-    <td>2/td>
+    <td>2</td>
     <td>User login dengan akun yang valid</td>
     <td>User mengakses web Agrifind</td>
     <td>User mengakses halaman login, lalu memasukkan email dan password kemudian klik log in</td>
@@ -207,7 +207,7 @@ Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak 
      <td>Pass</td>
   </tr>
    <tr>
-    <td>3/td>
+    <td>3</td>
     <td>User mengirimkan pesan kepada user lain</td>
     <td>User telah login</td>
     <td>User mengakses profile user lain yang akan dikirimkan pesannya kemudian user mengklik message button dan menuliskan pesan yang diinginkan</td>
@@ -216,7 +216,7 @@ Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak 
      <td>Pass</td>
   </tr>
    <tr>
-    <td>4/td>
+    <td>4</td>
     <td>User mengikuti user lain</td>
     <td>User telah melakukan login</td>
     <td>User mengakses profile user lain dan mengklik tombol follow</td>
@@ -225,7 +225,7 @@ Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak 
      <td>Pass</td>
   </tr>
    <tr>
-    <td>5/td>
+    <td>5</td>
     <td>User mengedit profile</td>
     <td>User telah melakukan login</td>
     <td>User mengakses setting page dan menambahkan info yang dibutuhkan seperti foto profil, header, kontak, skill dan achievement</td>

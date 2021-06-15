@@ -172,9 +172,69 @@ Lebih lengkapnya bisa dibaca di site kami :)
 
 
 ## HASIL IMPLEMENTASI
-
+## Link Aplikasi
+demo aplikasi dapat diakses di : <a href="http://agrifind.rf.gd/">http://agrifind.rf.gd/</a>
 ## TESTING
+Kami melakukan testing secara manual tanpa menggunakan bantuan tools atau script, tujuannya adalah untuk memastikan aplikasi bebas dari bugs dan dapat bekerja sesuai dengan yang diinginkan.
 ### POSITIVE CASE
+Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak dengan memberikan kumpulan data yang valid.
+<table>
+   <tr>
+    <th>No/th>
+    <th>Skenario</th>
+    <th>Pre-requisites</th>
+     <th>Langkah </th>
+     <th> Expected Result </th>
+     <th> Actual Result </th>
+     <th> Status </th>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>User mendaftarkan nama, email, dan password yang valid</td>
+    <td>User mengakses web Agrifind</td>
+    <td>User mengakses halaman sign up, lalu memasukkan nama, email dan password, kemudian mencentang persyaratan lalu klik sign up</td>
+     <td>Sign up berhasil dan user diarahkan ke page verifikasi email untuk menerima verifikasi</td>
+     <td>Sign up berhasil dan user diarahkan ke page verifikasi email untuk menerima verifikasi</td>
+     <td>Pass</td>
+  </tr>
+   <tr>
+    <td>2/td>
+    <td>User login dengan akun yang valid</td>
+    <td>User mengakses web Agrifind</td>
+    <td>User mengakses halaman login, lalu memasukkan email dan password kemudian klik log in</td>
+     <td>Log in berhasil dan user akan diarahkan ke menu user’s profile</td>
+     <td>Log in berhasil dan user akan diarahkan ke menu user’s profile</td>
+     <td>Pass</td>
+  </tr>
+   <tr>
+    <td>3/td>
+    <td>User mengirimkan pesan kepada user lain</td>
+    <td>User telah login</td>
+    <td>User mengakses profile user lain yang akan dikirimkan pesannya kemudian user mengklik message button dan menuliskan pesan yang diinginkan</td>
+     <td>Pesan berhasil terkirim dan user lain dapat menerima pesan tersebut serta tersimpan di halaman send pada user</td>
+     <td>Pesan berhasil terkirim dan user lain dapat menerima pesan tersebut serta tersimpan di halaman send pada user</td>
+     <td>Pass</td>
+  </tr>
+   <tr>
+    <td>4/td>
+    <td>User mengikuti user lain</td>
+    <td>User telah melakukan login</td>
+    <td>User mengakses profile user lain dan mengklik tombol follow</td>
+     <td>User berhasil mengikuti user lain dan tersimpan pada halaman following</td>
+     <td>User berhasil mengikuti user lain dan tersimpan pada halaman following</td>
+     <td>Pass</td>
+  </tr>
+   <tr>
+    <td>5/td>
+    <td>User mengedit profile</td>
+    <td>User telah melakukan login</td>
+    <td>User mengakses setting page dan menambahkan info yang dibutuhkan seperti foto profil, header, kontak, skill dan achievement</td>
+     <td>Profile berhasil diedit</td>
+     <td>Profile berhasil diedit</td>
+     <td>Pass</td>
+  </tr>
+ </table>
+       
 ### NEGATIVE CASE
 
 # OUR JOURNAL

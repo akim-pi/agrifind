@@ -21,9 +21,9 @@ Aplikasi berbasis web untuk mencari dan menemukan mahasiswa IPB yang memiliki ke
 ## ANGGOTA KELOMPOK
 | No | Nama | NIM | Role |
 | --- | --- | --- | --- | 
-| 1 | Annisa Dwi Quintho | G64190006 | Front-end, UI UX |
+| 1 | Annisa Dwi Quintho | G64190006 | Project Manager, Front-end, UI UX |
 | 2 | Imaduddin Abdurrahman | G64190023 | Front-end, UI UX |
-| 3 | Fitria Nuryantika | G64190058 | Front-end |
+| 3 | Fitria Nuryantika | G64190058 | Front-end, UI UX |
 | 4 | Abdul Hakim | G64190078 | Back-end, Database |
 
 ## LATAR BELAKANG
@@ -73,8 +73,9 @@ Lebih lengkapnya bisa dibaca di site kami :)
       <tr><td>OS</td><td>Windows 10</td></tr>
       <tr><td>Editor</td><td>Visual Studio Code</td></tr>
       <tr><td>Framework</td><td>Codeigniter, Bootstrap</td></tr>
-      <tr><td>Database</td><td>MySQL </td></tr>
-      <tr><td>Server </td><td>Apache </td></tr>
+      <tr><td>Database</td><td>MySQL</td></tr>
+      <tr><td>Server</td><td>Apache</td></tr>
+      <tr><td>Design</td><td>Figma, Canva</td></tr>
 </table>
 
 ### Hardware
@@ -86,14 +87,13 @@ Lebih lengkapnya bisa dibaca di site kami :)
 </table>
 
 ### Tech Stack
--   Figma
--   Trello
--   MySql
--   PHP
--   Laravel
--   Apache
-
-## HASIL DAN PEMBAHASAN
+<table>
+      <tr><td>Front-end</td><td>HTML, CSS, Bootstrap</td></tr>
+      <tr><td>Back-end</td><td>Codeigniter 4 (PHP)</td></tr>
+      <tr><td>Design</td><td>Figma, Canva</td></tr>
+      <tr><td>Task Manager</td><td>Trello</td></tr>
+      <tr><td>Documentation</td><td>Google Site, Google Docs, Github</td></tr>
+</table>
 
 ## USE CASE DIAGRAM
 ![agrfind-Page-13](https://user-images.githubusercontent.com/63986370/121780896-98aa5a00-cbcc-11eb-8ae2-ad951ed9e4c7.png)
@@ -123,6 +123,11 @@ Lebih lengkapnya bisa dibaca di site kami :)
 ![agrfind-Architectue](https://user-images.githubusercontent.com/63986370/121781707-453a0b00-cbd0-11eb-979c-cc5df98bb001.png)
 
 ## MAIN FEATURE
+- User dapat membuat akun, dan masuk ke dalam akunnya.
+- User dapat mengubah profil
+- User dapat mengirim pesan
+- User dapat tambah, ubah dan hapus skill dan achievement
+- User dapat melihat profile user lain
 
 ## CRUD
 <table>
@@ -165,13 +170,19 @@ Lebih lengkapnya bisa dibaca di site kami :)
       </tr>
 </table>
 
-
-
-
-
 ## HASIL IMPLEMENTASI
-## Link Aplikasi
+### Profile
+![profile](https://user-images.githubusercontent.com/63986370/121987480-c0631300-cdc2-11eb-9647-3b730fb69617.jpeg)
+
+### View Profile
+![view](https://user-images.githubusercontent.com/63986370/121987475-bf31e600-cdc2-11eb-8109-32e1b0118d3f.jpeg)
+
+### People
+![people](https://user-images.githubusercontent.com/63986370/121987474-be994f80-cdc2-11eb-9446-200334ffc8e4.jpeg)
+
+### Link Aplikasi
 demo aplikasi dapat diakses di : <a href="http://agrifind.rf.gd/">http://agrifind.rf.gd/</a>
+
 ## TESTING
 Kami melakukan testing secara manual tanpa menggunakan bantuan tools atau script, tujuannya adalah untuk memastikan aplikasi bebas dari bugs dan dapat bekerja sesuai dengan yang diinginkan.
 ### POSITIVE CASE
@@ -261,6 +272,15 @@ Pengujian positif merupakan jenis pengujian yang dilakukan pada perangkat lunak 
     <td>User mengakses halaman login, lalu memasukkan email dan password dengan format yang salah kemudian klik log in</td>
      <td>Log in gagal dan user dipersilahkan isi form kembali</td>
      <td>Log in gagal dan user dipersilahkan isi form kembali</td>
+     <td>Pass</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Token tidak ada</td>
+    <td>User sign up atau forgot password</td>
+    <td>User membuat akun atau ingin mengganti password karena lupa</td>
+     <td>Log in page memberi alert</td>
+     <td>Log in page memberi alert</td>
      <td>Pass</td>
   </tr>
   </table>
